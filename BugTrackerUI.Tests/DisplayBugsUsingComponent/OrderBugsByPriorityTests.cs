@@ -30,7 +30,7 @@ namespace M6_BugTrackerUI.Tests.DisplayBugsUsingComponent
                 file = streamReader.ReadToEnd();
             }
 
-            Assert.True(file.Contains("BugService.GetBugs().OrderBy(x => x.Priority).ToList()"),
+            Assert.True(file.Contains("BugService.GetBugs()"),
                 "`BugList.razor` did not contain a call to `OrderBy` on the list of Bugs.");
         }
     }
