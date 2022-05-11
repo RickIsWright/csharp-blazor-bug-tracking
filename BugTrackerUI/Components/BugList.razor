@@ -36,9 +36,9 @@
 
     public List<Bug> Bugs { get; set; }
 
-    protected override void OnInitialized()
+    protected void OnInitialized()
     {
         base.OnInitialized();
-        Bugs = BugService.GetBugs().OrderBy(x=>x.Priority).ToList();
+        Bugs = BugService.GetBugs().OrderBy(x=>x.Priority);
     }
 }
