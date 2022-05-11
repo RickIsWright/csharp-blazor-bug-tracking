@@ -39,6 +39,6 @@
     protected void OnInitialized()
     {
         base.OnInitialized();
-        Bugs = BugService.GetBugs().OrderBy(x=>x.Priority);
+        Bugs = (List<Bug>)BugService.GetBugs().OrderBy(x=>x.Priority);
     }
 }
